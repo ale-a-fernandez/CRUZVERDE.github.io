@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Salud</title>
+  <link rel="shortcut icon" href="img/cruz verde png 1.png" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+
+  <header>
+    <a href="https://www.salud.larioja.gob.ar/">Ir al Sitio del Ministerio de Salud de La Rioja</a> |
+    <a href="mailto:centrodesalud@gmail.com">Escribe un email al <strong>Centro de Salud</strong></a>
+    <hr />
+    <h1><strong>CENTRO DE SALUD</strong></h1>
+
+    <p>
+      Bienvenidos al <strong>Centro de Salud</strong>,
+      <em>lugar donde podrá recibir la mejor atención brindada por todo el equipo relacionado a Salud.</em>
+    </p>
+  </header>
+
+  <main>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/caps imagen 3.jpg" class="d-block w-100" alt="Imagen 3">
+        </div>
+        <div class="carousel-item">
+          <img src="img/caps imagen 4.jpg" class="d-block w-100" alt="Imagen 4">
+        </div>
+        <div class="carousel-item">
+          <img src="img/caps imagen 5.jpg" class="d-block w-100" alt="Imagen 5">
+        </div>
+        <div class="carousel-item">
+          <img src="img/caps imagen 6.jpg" class="d-block w-100" alt="Imagen 6">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <br />
+    <hr />
+  </main>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/cruz verde png 1.png" alt="Logotipo del Centro de Salud" width="30" height="24">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#RESERVAR_UN_TURNO">RESERVAR UN TURNO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ESPECIALIDADES">ESPECIALIDADES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#triage">TRIAGE</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ATENCION
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#horarios">DIAS</a></li>
+              <li><a class="dropdown-item" href="#horarios">HORARIOS</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="BUSCAR" aria-label="Search">
+          <button class="btn btn-outline-success" type="button">IR</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="login-container">
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit">Ingresar</button>
+      <p id="error-message"></p>
+    </form>
+  </div>
+
+  <script src="ministerio.js"></script>
+
+  <!--triage-->
+
+  <div class="container">
+    <h2 id="triage" class="text-center my-4">Clasificación de Triage</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered triage-table">
+        <thead class="table-dark">
+          <tr>
+            <th>Nivel de Urgencia</th>
+            <th>Tipo de Urgencia</th>
+            <th>Color</th>
+            <th>Tiempo de Espera</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Nivel de Urgencia">1</td>
+            <td data-label="Tipo de Urgencia">Resucitación</td>
+            <td data-label="Color" class="bg-red">Rojo</td>
+            <td data-label="Tiempo de Espera">Atención Inmediata</td>
+          </tr>
+          <tr>
+            <td data-label="Nivel de Urgencia">2</td>
+            <td data-label="Tipo de Urgencia">Emergencia</td>
+            <td data-label="Color" class="bg-orange">Naranja</td>
+            <td data-label="Tiempo de Espera">10 - 15 minutos</td>
+          </tr>
+          <tr>
+            <td data-label="Nivel de Urgencia">3</td>
+            <td data-label="Tipo de Urgencia">Urgencia</td>
+            <td data-label="Color" class="bg-yellow">Amarillo</td>
+            <td data-label="Tiempo de Espera">60 minutos</td>
+          </tr>
+          <tr>
+            <td data-label="Nivel de Urgencia">4</td>
+            <td data-label="Tipo de Urgencia">Urgencia Menor</td>
+            <td data-label="Color" class="bg-green">Verde</td>
+            <td data-label="Tiempo de Espera">2 horas</td>
+          </tr>
+          <tr>
+            <td data-label="Nivel de Urgencia">5</td>
+            <td data-label="Tipo de Urgencia">Sin Urgencia</td>
+            <td data-label="Color" class="bg-blue">Azul</td>
+            <td data-label="Tiempo de Espera">4 horas</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!--ATENCION-->
+
+  <section id="horarios" class="flex-fill me-3">
+    <h2>Horarios y Dias</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Martes: 14:00hs - 22:00hs</li>
+      <li class="list-group-item">Miércoles: 14:00hs - 22:00hs</li>
+      <li class="list-group-item">Jueves: 14:00hs - 22:00hs</li>
+      <li class="list-group-item">Viernes: 14:00hs - 22:00hs</li>
+      <li class="list-group-item">Sábado: 9:00hs - 17:00hs</li>
+    </ul>
+  </section>
+
+    <!--solicitud de turno-->
+    <section id="RESERVAR_UN_TURNO" class="flex-fill ms-3">
+        <h2>Solicitud de Turno</h2>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre y Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Ingrese su nombre y apellido"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label"
+              >Contacto (número de teléfono)</label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              id="telefono"
+              placeholder="Ingrese su número de teléfono"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="fecha" required />
+          </div>
+        
+        </form>
+
+    </section>
+
+    <!--ESPECIALIDADES-->
+    <section id="ESPECIALIDADES" class="flex-fill ms-3"></section>
+        <h2>ESPECIALIDADES</h2>
+        <div>
+            <ul>
+                <li>Medicina General</li>
+                <li>Pediatría</li>
+                <li>Ginecología y Obstetricia</li>
+                <li>Cardiología</li>
+                <li>Dermatología</li>
+                <li>Neurología</li>
+                <li>Psiquiatría</li>
+                <li>Endocrinología</li>
+                <li>Oncología</li>
+                <li>Gastroenterología</li>
+                <li>Ortopedia</li>
+                <li>Traumatología</li>
+                <li>Oftalmología</li>
+                <li>Otorrinolaringología</li>
+                <li>Urología</li>
+                <li>Medicina Interna</li>
+                <li>Anestesiología</li>
+                <li>Radiología</li>
+                <li>Medicina Familiar</li>
+                <li>Medicina del Trabajo</li>
+            </ul>
+
+        </div>
+
+<footer>
+  <div class="contenedor">
+    <span>Derecho del autor</span>
+      <p>La rioja Argentina</p>
+
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
+
+  
